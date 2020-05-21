@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+}
+::selection {
+	background-color: $color-primary-green;
+	color: $color-grey-light;
+}
+html {
+	font-size: 62.5%; // 10/16px = 0.625px = 62.5%.
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 1.8rem;
+}
