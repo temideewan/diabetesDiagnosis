@@ -1,0 +1,103 @@
+.info {
+	&__card {
+		height: 30rem;
+		display: grid;
+		grid-template-rows: 1fr auto;
+		border-radius: 0.7rem;
+		overflow: hidden;
+		background-color: $color-white;
+
+		&--top {
+			background-position: center;
+			background-size: cover;
+			position: relative;
+
+			&-1 {
+				background-image: linear-gradient(
+						to right bottom,
+						rgba($color-primary-blue, 0.6),
+						rgba($color-primary-lightblue, 0.7) 60%
+					),
+					url(../images/dart.jpg);
+				// padding: 2rem 0;
+			}
+
+			&-2 {
+				background-image: linear-gradient(
+						to right bottom,
+						rgba($color-secondary-green-light, 0.7),
+						rgba($color-secondary-green-dark, 0.4)
+					),
+					url(../images/testing.jpg);
+			}
+
+			&-3 {
+				background-image: linear-gradient(
+						to right bottom,
+						rgba($color-secondary-orange-light, 0.6),
+						rgba($color-secondary-orange-dark, 0.5)
+					),
+					url(../images/record.jpg);
+			}
+
+			&-4 {
+				background-image: linear-gradient(
+						to right bottom,
+						rgba($color-primary-blue, 0.7),
+						rgba($color-tertiary-blue-dark, 0.5)
+					),
+					url(../images/suggestion.jpg);
+			}
+		}
+		&--header {
+			position: absolute;
+			bottom: 2.9rem;
+			right: 0.8rem;
+			font-size: 2.5rem;
+			font-weight: 300;
+			text-align: right;
+			color: $color-grey-light;
+			text-transform: uppercase;
+
+			width: 80%;
+			&-1 {
+				background-image: linear-gradient(
+					to right bottom,
+					rgba($color-primary-lightblue, 0.85),
+					rgba($color-primary-blue, 0.8)
+				);
+				padding: 1.2rem 2.5rem;
+				box-decoration-break: clone;
+			}
+			&-2 {
+				background-image: linear-gradient(
+					to right bottom,
+					rgba($color-secondary-green-light, 0.5),
+					rgba($color-secondary-green-dark, 0.7)
+				);
+				padding: 1.2rem 2.5rem;
+				box-decoration-break: clone;
+			}
+			&-3 {
+				background-image: linear-gradient(
+					to right bottom,
+					rgba($color-secondary-orange-light, 0.75),
+					rgba($color-secondary-orange-dark, 0.8)
+				);
+				padding: 1.2rem 2.5rem;
+				box-decoration-break: clone;
+			}
+			&-4 {
+				background-image: linear-gradient(
+					to right bottom,
+					rgba($color-primary-blue, 0.7),
+					rgba($color-tertiary-blue-dark, 0.6)
+				);
+				padding: 1.2rem 2.5rem;
+				box-decoration-break: clone;
+			}
+		}
+		&--body {
+		}
+	}
+}

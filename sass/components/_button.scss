@@ -1,0 +1,41 @@
+.cta {
+	&,
+	&:link,
+	&:visited {
+		text-transform: uppercase;
+		text-decoration: none;
+		padding: 1.2rem 2rem;
+		display: inline-block;
+		border-radius: 10rem;
+		transition: all 0.3s ease;
+		position: relative;
+		font-size: 1.6rem;
+		backface-visibility: hidden;
+
+		background-color: rgba($color-white, 0.5);
+		color: $color-primary-green;
+		border: 2px solid $color-primary-green;
+		cursor: pointer;
+		box-shadow: 0 0.5rem 1rem rgba($color-black, 0.17) inset,
+			0 -0.5rem 1rem rgba($color-white, 0.2) inset;
+	}
+
+	&:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 1rem 2rem rgba($color-black, 0.12);
+		background-image: linear-gradient(
+			135deg,
+			rgba($color-secondary-green, 0.9),
+			rgba($color-primary-green, 0.9) 50%
+		);
+		color: $color-white;
+		border: 2px solid transparent;
+	}
+
+	&:active,
+	&:focus {
+		outline: none;
+		transform: translateY(-1px);
+		box-shadow: 0 0.5rem 1rem rgba($color-black, 0.12);
+	}
+}

@@ -1,0 +1,14 @@
+.section__info {
+	background-color: $color-grey-light;
+	padding: 10em 14rem;
+	margin-top: -2.5rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.info__body {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	column-gap: 4rem;
+	row-gap: 4rem;
+}

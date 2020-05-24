@@ -4,6 +4,9 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Diabetes Diagnosis</title>
+		<link rel="stylesheet" href="./public/css/icon.css" />
+		<link rel="stylesheet" href="./public/css/icon2.css" />
+		<link rel="stylesheet" href="./public/css/styles.css" />
 	</head>
 	<body>
 		<!-- Overall grid system for the site -->
@@ -25,7 +28,9 @@
 					<!-- Links -->
 					<ul class="navigation__list">
 						<li class="navigation__list-items">
-							<a href="#" class="navigation__link">Home</a>
+							<a href="#" class="navigation__link navigation__link--active"
+								>Home</a
+							>
 						</li>
 						<li class="navigation__list-items">
 							<a href="#" class="navigation__link">About</a>
@@ -33,10 +38,8 @@
 						<li class="navigation__list-items">
 							<a href="#" class="navigation__link">Contact Us</a>
 						</li>
-						<li class="navigation__list-items">
-							<button class="cta navigation__btn">Take a test</button>
-						</li>
 					</ul>
+					<a href="#" class="cta navigation__btn">Take a test</a>
 				</nav>
 				<!-- end of  navigation -->
 
@@ -44,12 +47,16 @@
 				<div class="hero">
 					<div class="hero__message">
 						<h1 class="hero__message--heading">
-							Smart Diabetes Diagnosis
+							<span>Smart</span> Diabetes Diagnosis
 						</h1>
 						<p class="hero__message--body">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
-							eaque exercitationem, vel assumenda repellat earum!
+							Our expert system has been designed in such a way that patients
+							can be diagnosed remotely based on carefully selected symptoms
+							from our diagnosis system
 						</p>
+						<a href="#" class="cta hero__button">
+							Signup as a New patient
+						</a>
 					</div>
 
 					<div class="hero__image">
@@ -62,6 +69,114 @@
 				<!-- End of Hero -->
 			</header>
 			<!-- End of header -->
+
+			<!-- info section -->
+			<section class="section__info">
+				<h2 class="info__heading">
+					What we Offer
+				</h2>
+				<div class="info__body">
+					<div class="info__card">
+						<!-- picture -->
+						<div class="info__card--top info__card--top-1">
+							<h3 class="info__card--header">
+								<span class="info__card--header-1">Accuracy in diagnosis</span>
+							</h3>
+						</div>
+						<!-- h3 -->
+						<!-- paragrapgh -->
+						<p class="info__card--body">
+							The use of Machine learning algorithms ensure that our system
+							keeps improving on it's already precise diagnosis of diabetes and
+							get better results
+						</p>
+					</div>
+
+					<div class="info__card">
+						<!-- picture -->
+						<div class="info__card--top info__card--top-2">
+							<h3 class="info__card--header">
+								<span class="info__card--header-2">Ease in testing</span>
+							</h3>
+						</div>
+						<!-- h3 -->
+						<!-- paragrapgh -->
+						<p class="info__card--body">
+							The use of Machine learning algorithms ensure that our system
+							keeps improving on it's already precise diagnosis of diabetes and
+							get better results
+						</p>
+					</div>
+
+					<div class="info__card">
+						<!-- picture -->
+						<div class="info__card--top info__card--top-3">
+							<h3 class="info__card--header">
+								<span class="info__card--header-3">Record tracking</span>
+							</h3>
+						</div>
+						<!-- h3 -->
+						<!-- paragrapgh -->
+						<p class="info__card--body">
+							The use of Machine learning algorithms ensure that our system
+							keeps improving on it's already precise diagnosis of diabetes and
+							get better results
+						</p>
+					</div>
+
+					<div class="info__card">
+						<!-- picture -->
+						<div class="info__card--top info__card--top-4">
+							<h3 class="info__card--header">
+								<span class="info__card--header-4">Health suggestions</span>
+							</h3>
+						</div>
+						<!-- h3 -->
+						<!-- paragrapgh -->
+						<p class="info__card--body">
+							The use of Machine learning algorithms ensure that our system
+							keeps improving on it's already precise diagnosis of diabetes and
+							get better results
+						</p>
+					</div>
+				</div>
+			</section>
+			<!-- End of info section -->
+
+			<!-- Signup section -->
+			<section class="section__signup">
+				<h2 class="signup__heading">
+					Want to find out How it works?
+				</h2>
+				<p class="signup__para">
+					Sign up to Take a test and know your chances at Diabetes.
+				</p>
+				<button class="cta">Sign up</button>
+			</section>
+			<!-- End of sign up section -->
+
+			<footer class="site__footer">
+				<div class="footer__brand">
+					<img src="./public/images/logo1.png" alt="" />
+				</div>
+
+				<div class="footer__info">
+					<ul class="footer__info--list">
+						<li class="footer__info--list-item">
+							<!-- icon -->
+							address
+						</li>
+						<li class="footer__info--list-item">
+							<!-- icon -->
+							Phone
+						</li>
+						<li class="footer__info--list-item">
+							<!-- icon -->
+							Email
+						</li>
+					</ul>
+				</div>
+			</footer>
 		</div>
 		<!-- End of overall grid system -->
 	</body>

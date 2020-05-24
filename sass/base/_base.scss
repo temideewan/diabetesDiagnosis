@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 *,
 *::before,
 *::after {
@@ -6,7 +7,7 @@
 	box-sizing: inherit;
 }
 ::selection {
-	background-color: $color-primary-green;
+	background-color: $color-primary-blue;
 	color: $color-grey-light;
 }
 html {
@@ -14,8 +15,10 @@ html {
 }
 
 body {
+	font-family: 'Inter', sans-serif;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-size: 1.8rem;
+	line-height: 1.5;
+	background-color: $color-grey-light;
 }

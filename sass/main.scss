@@ -1,6 +1,11 @@
 @import './abstracts/variables';
 @import './base/base';
 @import './base/typograpghy';
+@import './components/navigation';
+@import './components/button';
+@import './components/hero';
+@import './components/info-card';
+@import './layout/info';
 @import './pages/landing';
 @import './pages/about';
 @import './pages/diagnosis';
