@@ -37,8 +37,24 @@ body {
   margin-bottom: 4rem; }
 
 .info__heading {
-  font-size: 3.5rem;
-  margin-bottom: 2.7rem; }
+  font-size: 3.7rem;
+  margin-bottom: 3rem;
+  color: #2d314d; }
+
+.signup__heading {
+  margin-bottom: 4rem;
+  color: white;
+  font-size: 4rem; }
+  .signup__heading span {
+    color: #2bb7da; }
+
+.signup__subheading {
+  font-size: 2.5rem;
+  color: #f3f4f6;
+  margin-bottom: 4rem; }
+  .signup__subheading span {
+    color: #2bb7da;
+    font-size: 2rem; }
 
 .navigation {
   display: flex;
@@ -136,7 +152,7 @@ body {
       font-size: 1.8rem;
       width: 90%;
       color: #9698a6;
-      margin-bottom: 4rem; }
+      margin-bottom: 3rem; }
   .hero__button {
     margin-left: -0.2rem; }
   .hero__image {
@@ -145,12 +161,17 @@ body {
     z-index: 10; }
 
 .info__card {
-  height: 30rem;
+  height: 40rem;
   display: grid;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: 1.5fr auto;
   border-radius: 0.7rem;
   overflow: hidden;
-  background-color: white; }
+  background-color: white;
+  box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease; }
+  .info__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
   .info__card--top {
     background-position: center;
     background-size: cover;
@@ -175,20 +196,33 @@ body {
     width: 80%; }
     .info__card--header-1 {
       background-image: linear-gradient(to right bottom, rgba(43, 183, 218, 0.85), rgba(45, 49, 77, 0.8));
-      padding: 1.2rem 2.5rem;
-      box-decoration-break: clone; }
+      padding: 1.2rem 2.3rem;
+      box-decoration-break: clone;
+      backface-visibility: hidden; }
     .info__card--header-2 {
       background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.5), rgba(40, 180, 133, 0.7));
       padding: 1.2rem 2.5rem;
-      box-decoration-break: clone; }
+      box-decoration-break: clone;
+      backface-visibility: hidden; }
     .info__card--header-3 {
       background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.75), rgba(255, 119, 48, 0.8));
       padding: 1.2rem 2.5rem;
-      box-decoration-break: clone; }
+      box-decoration-break: clone;
+      backface-visibility: hidden; }
     .info__card--header-4 {
       background-image: linear-gradient(to right bottom, rgba(45, 49, 77, 0.7), rgba(86, 67, 250, 0.6));
       padding: 1.2rem 2.5rem;
-      box-decoration-break: clone; }
+      box-decoration-break: clone;
+      backface-visibility: hidden; }
+  .info__card--body {
+    text-align: left;
+    padding: 3rem 2rem;
+    font-size: 1.5rem;
+    color: #9698a6; }
+    .info__card--body span {
+      color: #777;
+      font-weight: 600;
+      font-size: 1.6rem; }
 
 .section__info {
   background-color: #fafafa;
@@ -203,10 +237,41 @@ body {
   column-gap: 4rem;
   row-gap: 4rem; }
 
+.section__signup {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)), url(../images/path-2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.signup__button {
+  font-size: 2rem;
+  color: #2bb7da;
+  display: inline-block;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #2bb7da;
+  border-left: 1px solid #2bb7da;
+  padding: 0.6rem;
+  transition: all 0.3s; }
+  .signup__button:hover {
+    background-color: #2bb7da;
+    color: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px); }
+
 .container-grid {
   display: grid;
   grid-template-rows: 100vh;
-  grid-template-columns: [full-start] minmax(4rem, 1fr) [center-start] repeat(8, minmax(min-content, 25rem)) [center-end] minmax(min-content, 4rem, 1fr) [full-end]; }
+  grid-template-columns: [full-start] minmax(4rem, 1fr) [center-start] repeat(8, minmax(min-content, 25rem)) [center-end] minmax(min-content, 4rem, 1fr) [full-end];
+  scroll-snap-type: mandatory;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth; }
 
 .site__header {
   grid-row: 1/2;
@@ -226,13 +291,14 @@ body {
 
 .section__info {
   grid-column: 1/-1;
-  grid-row: 3/4; }
+  grid-row: 3/4;
+  margin-bottom: 5rem; }
 
 .section__signup {
   grid-column: 1/-1;
   grid-row: 4/5;
-  background-color: red;
-  padding: 2rem 14rem; }
+  padding: 2rem 0;
+  scroll-snap-align: start; }
 
 .site__footer {
   grid-column: 1/-1;

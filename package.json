@@ -4,7 +4,9 @@
 	"description": "Project",
 	"main": "index.js",
 	"scripts": {
-		"watch:sass": "node-sass sass/main.scss public/css/styles.css -w"
+		"watch:sass": "node-sass sass/main.scss public/css/styles.css -w",
+		"devServer": "live-server --browser=firefox",
+		"start": "npm-run-all --parallel watch:sass devServer"
 	},
 	"author": "temideewan",
 	"license": "ISC",

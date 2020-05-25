@@ -22,7 +22,28 @@
 
 .info {
 	&__heading {
-		font-size: 3.5rem;
-		margin-bottom: 2.7rem;
+		font-size: 3.7rem;
+		margin-bottom: 3rem;
+		color: $color-primary-blue;
+	}
+}
+
+.signup {
+	&__heading {
+		margin-bottom: 4rem;
+		color: $color-white;
+		font-size: 4rem;
+		span {
+			color: $color-primary-lightblue;
+		}
+	}
+	&__subheading {
+		font-size: 2.5rem;
+		color: $color-grey;
+		margin-bottom: 4rem;
+		span {
+			color: $color-primary-lightblue;
+			font-size: 2rem;
+		}
 	}
 }

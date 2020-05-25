@@ -13,6 +13,10 @@
 			1fr
 		)
 		[full-end];
+
+	scroll-snap-type: mandatory;
+	scroll-snap-type: y mandatory;
+	scroll-behavior: smooth;
 }
 
 //The first viewport height including navigstion and the hero
@@ -45,14 +49,15 @@
 .section__info {
 	grid-column: 1/-1;
 	grid-row: 3/4;
+	margin-bottom: 5rem;
 }
 
 // The sign up section
 .section__signup {
 	grid-column: 1/-1;
 	grid-row: 4/5;
-	background-color: red;
-	padding: 2rem 14rem;
+	padding: 2rem 0;
+	scroll-snap-align: start;
 }
 
 .site__footer {

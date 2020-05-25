@@ -1,11 +1,17 @@
 .info {
 	&__card {
-		height: 30rem;
+		height: 40rem;
 		display: grid;
-		grid-template-rows: 1fr auto;
+		grid-template-rows: 1.5fr auto;
 		border-radius: 0.7rem;
 		overflow: hidden;
 		background-color: $color-white;
+		box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.3);
+		transition: all 0.3s ease;
+		&:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+		}
 
 		&--top {
 			background-position: center;
@@ -66,8 +72,9 @@
 					rgba($color-primary-lightblue, 0.85),
 					rgba($color-primary-blue, 0.8)
 				);
-				padding: 1.2rem 2.5rem;
+				padding: 1.2rem 2.3rem;
 				box-decoration-break: clone;
+				backface-visibility: hidden;
 			}
 			&-2 {
 				background-image: linear-gradient(
@@ -77,6 +84,7 @@
 				);
 				padding: 1.2rem 2.5rem;
 				box-decoration-break: clone;
+				backface-visibility: hidden;
 			}
 			&-3 {
 				background-image: linear-gradient(
@@ -86,6 +94,7 @@
 				);
 				padding: 1.2rem 2.5rem;
 				box-decoration-break: clone;
+				backface-visibility: hidden;
 			}
 			&-4 {
 				background-image: linear-gradient(
@@ -95,9 +104,19 @@
 				);
 				padding: 1.2rem 2.5rem;
 				box-decoration-break: clone;
+				backface-visibility: hidden;
 			}
 		}
 		&--body {
+			text-align: left;
+			padding: 3rem 2rem;
+			font-size: 1.5rem;
+			color: $color-grey-blue;
+			span {
+				color: $color-grey-dark;
+				font-weight: 600;
+				font-size: 1.6rem;
+			}
 		}
 	}
 }
