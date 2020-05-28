@@ -4,9 +4,9 @@
 	font-family: 'linea-arrows-10';
 	src: url('fonts2/linea-arrows-10.eot');
 	src: url('fonts2/linea-arrows-10.eot?#iefix') format('embedded-opentype'),
-		url('fonts2/linea-arrows-10.woff') format('woff'),
-		url('fonts2/linea-arrows-10.ttf') format('truetype'),
-		url('fonts2/linea-arrows-10.svg#linea-arrows-10') format('svg');
+		url('./fonts2/linea-arrows-10.woff') format('woff'),
+		url('./fonts2/linea-arrows-10.ttf') format('truetype'),
+		url('./fonts2/linea-arrows-10.svg#linea-arrows-10') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }

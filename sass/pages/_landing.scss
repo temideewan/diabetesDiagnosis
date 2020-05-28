@@ -4,24 +4,14 @@
 .container-grid {
 	display: grid;
 	grid-template-rows: 100vh;
-	grid-template-columns:
-		[full-start]
-		minmax(4rem, 1fr)
-		[center-start] repeat(8, minmax(min-content, 25rem)) [center-end] minmax(
-			min-content,
+	grid-template-columns: minmax(4rem, 1fr) repeat(8, minmax(min-content, 25rem)) minmax(
 			4rem,
 			1fr
-		)
-		[full-end];
-
-	scroll-snap-type: mandatory;
-	scroll-snap-type: y mandatory;
-	scroll-behavior: smooth;
+		);
 }
 
 //The first viewport height including navigstion and the hero
 .site__header {
-	grid-row: 1/2;
 	grid-column: 1/-1;
 	display: grid;
 	grid-template-columns: subgrid;
@@ -35,35 +25,24 @@
 
 .hero {
 	grid-column: 1/-1;
-	grid-row: 2/3;
+
 	z-index: 10;
-
-	&__message {
-	}
-
-	&__image {
-	}
 }
 
 // the next viewport
 .section__info {
 	grid-column: 1/-1;
-	grid-row: 3/4;
+
 	margin-bottom: 5rem;
 }
 
 // The sign up section
 .section__signup {
 	grid-column: 1/-1;
-	grid-row: 4/5;
+
 	padding: 2rem 0;
-	scroll-snap-align: start;
 }
 
 .site__footer {
 	grid-column: 1/-1;
-	grid-row: 5/6;
-	background-color: brown;
-	display: flex;
-	padding: 2rem 14rem;
 }

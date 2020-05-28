@@ -3,8 +3,8 @@
 	align-items: center;
 	background-color: rgba($color-white, 0.9);
 	justify-content: space-between;
-	padding: 0 14rem;
-	border-bottom: 1px solid rgba($color-primary-blue, 0.2);
+	padding: 1.5rem 14rem;
+	border-bottom: 4px solid rgba($color-primary-blue, 0.2);
 
 	&__list {
 		display: flex;
@@ -39,7 +39,7 @@
 	}
 	&__link {
 		&:link,
-		&:active {
+		&:visited {
 			font-size: 1.85rem;
 			outline: none;
 			text-decoration: none;
@@ -49,7 +49,13 @@
 		}
 
 		&--active {
-			color: $color-primary-lightblue;
+			&:link,
+			&:visited {
+				color: $color-primary-lightblue-2;
+			}
 		}
+	}
+	&__btn {
+		padding: 1rem 2rem;
 	}
 }

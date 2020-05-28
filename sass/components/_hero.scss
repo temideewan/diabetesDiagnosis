@@ -25,7 +25,8 @@
 			margin-bottom: 1.5rem;
 			span {
 				font-size: 7rem;
-				color: $color-primary-green;
+				color: $color-primary-lightblue;
+				font-weight: 700;
 			}
 		}
 		&--body {
@@ -42,5 +43,9 @@
 		height: 100%;
 		width: 60%;
 		z-index: 10;
+	}
+
+	&__btn {
+		padding: 1.2rem 2rem;
 	}
 }

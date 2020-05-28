@@ -1,0 +1,81 @@
+.about {
+	&__header {
+		grid-row: 1/2;
+		grid-column: 1/-1;
+		display: grid;
+		grid-template-columns: subgrid;
+		grid-template-rows: 7rem calc(70vh - 7rem);
+	}
+	&-hero {
+		grid-row: 2/3;
+		grid-column: 1/-1;
+		display: flex;
+		justify-content: space-between;
+		padding: 2rem 0 0 14rem;
+		align-items: center;
+		overflow: hidden;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
+			url(../images/team.jpg);
+		background-attachment: fixed;
+		background-position: center;
+		background-size: cover;
+		&__message {
+			&--heading {
+				font-size: 7rem;
+				color: $color-grey;
+				span {
+					color: $color-primary-lightblue-2;
+				}
+			}
+			&--body {
+				a:link,
+				a:visited {
+					text-decoration: none;
+					color: $color-white;
+					font-size: 1.5rem;
+					display: inline-block;
+					text-transform: uppercase;
+					transition: all 0.3s ease;
+					padding: 0.5rem 1rem;
+				}
+				a:hover,
+				a:active {
+					transform: translateX(-3px) translateY(-3px);
+					background-color: $color-primary-blue;
+					color: $color-grey-light;
+					box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+				}
+			}
+		}
+	}
+}
+
+.about {
+	&__info {
+		background-color: $color-grey-light;
+		padding: 5rem 14rem;
+		grid-column: 1/-1;
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 5rem;
+		&--header {
+			font-size: 4.5rem;
+			color: $color-primary-blue;
+			margin-bottom: 4rem;
+		}
+		&--body {
+			display: flex;
+			align-items: stretch;
+			justify-content: space-between;
+			color: $color-grey-blue;
+			font-size: 1.6rem;
+			line-height: 1.6;
+			p {
+				width: 90%;
+				&:not(:last-of-type) {
+					margin-bottom: 1rem;
+				}
+			}
+		}
+	}
+}
