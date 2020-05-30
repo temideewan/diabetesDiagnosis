@@ -201,6 +201,177 @@
 				</div>
 			</footer>
 		</div>
+
+		<!-- Modal form -->
+		<div class="modal">
+			<form action="/" id="regForm" class="form__register" method="POST">
+				<h2 class="form--heading">Signup</h2>
+				<div class="form__item form__item--signup-first">
+					<input
+						class="form__item--input"
+						autocomplete="off"
+						type="text"
+						id="firstName"
+						name="firstName"
+						required
+					/>
+					<label class="form__item--label" for="firstName">
+						<span class="form__item--label--span">First Name</span>
+					</label>
+				</div>
+
+				<div class="form__item form__item---signup-last">
+					<input
+						class="form__item--input"
+						autocomplete="off"
+						type="text"
+						id="lastName"
+						name="lastName"
+						required
+					/>
+					<label class="form__item--label" for="lastName">
+						<span class="form__item--label--span">Last Name</span>
+					</label>
+				</div>
+
+				<div class="form__item form__item--signup-dob">
+					<input
+						class="form__item--input"
+						autocomplete="off"
+						type="date"
+						id="dob"
+						name="dob"
+						required
+					/>
+					<label class="form__item--label" for="dob">
+						<span class="form__item--label--span date">dd/mm/yyyy</span>
+					</label>
+				</div>
+
+				<div class="form__item form__item--signup-mail">
+					<input
+						class="form__item--input"
+						autocomplete="off"
+						type="email"
+						id="email"
+						name="email"
+						required
+					/>
+					<label class="form__item--label" for="email">
+						<span class="form__item--label--span">Email address</span>
+					</label>
+				</div>
+
+				<div class="form__item form__item--signup-password">
+					<input
+						class="form__item--input"
+						autocomplete="off"
+						type="password"
+						id="pwd"
+						name="password"
+						pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+						title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+						required
+					/>
+					<label class="form__item--label" for="pwd">
+						<span class="form__item--label--span">Password</span>
+					</label>
+				</div>
+
+				<div class="form__item form__item--signup--confpass">
+					<input
+						class="form__item--input"
+						autocomplete="off"
+						type="password"
+						id="Cpwd"
+						name="confirm_password"
+						required
+					/>
+					<label class="form__item--label" for="Cpwd">
+						<span class="form__item--label--span">Confirm Password</span>
+					</label>
+				</div>
+
+				<button type="submit" class="form__btn" name="register">
+					Register
+				</button>
+			</form>
+
+			<!-- separating line -->
+			<div class="modal__line"></div>
+
+			<form action="/" id="loginForm" class="form__login">
+				<h2 class="form--heading">Login</h2>
+				<div class="form__item form__item--login-name">
+					<input
+						class="form__item--input"
+						autocomplete="off"
+						type="text"
+						id="userName"
+						name="firstName"
+						required
+					/>
+					<label class="form__item--label" for="userName">
+						<span class="form__item--label--span">First Name</span>
+					</label>
+				</div>
+				<div class="form__item form__item--login-pass">
+					<input
+						class="form__item--input"
+						autocomplete="off"
+						type="password"
+						id="userPwd"
+						name="firstName"
+						pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+						title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+						required
+					/>
+					<label class="form__item--label" for="userPwd">
+						<span class="form__item--label--span">password</span>
+					</label>
+				</div>
+				<button type="submit" class="form__btn" name="register">
+					Login
+				</button>
+			</form>
+
+			<button class="modal__clear">&#10006;</button>
+		</div>
 		<!-- End of overall grid system -->
+
+		<script>
+			// buttons
+			const heroBtn = document.querySelector('.hero__btn');
+			const signupBtn = document.querySelector('.signup__button');
+			const clearModal = document.querySelector('modal__clear');
+
+			const modal = document.querySelector('.modal');
+			const container = document.querySelector('.container-grid');
+
+			[heroBtn, signupBtn].forEach(button => {
+				button.addEventListener('click', openModal);
+			});
+
+			function openModal(e) {
+				// This is to prevent the window location from changing
+				e.preventDefault();
+
+				// open the modal
+				modal.classList.toggle('open');
+
+				// take focus away from the background
+				container.classList.toggle('close');
+			}
+
+			// Using event delegation
+			modal.addEventListener('click', closeModal);
+
+			function closeModal(e) {
+				if (e.target.classList.contains('modal__clear')) {
+					modal.classList.toggle('open');
+					container.classList.toggle('close');
+				}
+			}
+		</script>
 	</body>
 </html>

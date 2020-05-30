@@ -1,0 +1,68 @@
+.modal {
+	width: 80%;
+	height: 80%;
+	position: fixed;
+	top: -50%;
+	left: 50%;
+	opacity: 0;
+	transform: translate(-50%, -50%);
+	background-image: linear-gradient(
+			rgba(255, 255, 255, 0.95),
+			rgba(255, 255, 255, 0.95)
+		),
+		url(../images/Taieri.svg);
+	color: $color-grey-dark-3;
+	padding: 5rem 10rem;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 2rem;
+	overflow: hidden;
+	transition: all 0.5s ease;
+
+	&__line {
+		height: 120%;
+		border-right: 3rem dotted rgba($color-grey-blue, 0.5);
+		position: absolute;
+		top: -4rem;
+		left: 50%;
+	}
+
+	&__clear {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+		font-size: 2.5rem;
+		color: $color-primary-blue;
+		background-color: $color-secondary-orange-dark;
+		border: none;
+		outline: none;
+		padding: 0.3rem 0.8rem;
+		border-radius: 0.3rem;
+		transition: all 0.4s ease;
+
+		&:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.07);
+		}
+
+		&:focus {
+			transform: translateY(0);
+			box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.01);
+		}
+	}
+}
+
+// Moddal functionality
+
+.open {
+	top: 50%;
+	opacity: 1;
+}
+
+// Body changes for modal opening
+
+.close {
+	filter: blur(10px) grayscale(80%);
+	pointer-events: none;
+	transform: scale(0.98);
+}
