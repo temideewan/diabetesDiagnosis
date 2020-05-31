@@ -13,11 +13,22 @@
 	background-attachment: fixed;
 	background-position: center;
 	background-size: cover;
+	@include respond(tab-port) {
+		flex-direction: column;
+		align-items: center;
+	}
 
 	&__message {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+		@include respond(tab-land) {
+			margin-top: -20rem;
+			flex: 0 0 50%;
+		}
+		@include respond(tab-port) {
+			margin-top: 10rem;
+		}
 		&--heading {
 			font-size: 5.5rem;
 			color: $color-primary-blue;
@@ -34,6 +45,9 @@
 			width: 90%;
 			color: $color-grey-blue;
 			margin-bottom: 3rem;
+			@include respond(tab-port) {
+				width: 60%;
+			}
 		}
 	}
 	&__button {
@@ -43,6 +57,14 @@
 		height: 100%;
 		width: 60%;
 		z-index: 10;
+		@include respond(tab-land) {
+			width: 140%;
+			flex: 0 0 50%;
+			margin-top: -3rem;
+		}
+		@include respond(tab-port) {
+			margin-top: -18rem;
+		}
 	}
 
 	&__btn {

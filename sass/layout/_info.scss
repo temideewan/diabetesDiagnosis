@@ -4,6 +4,9 @@
 	margin-top: -2.5rem;
 	display: flex;
 	flex-direction: column;
+	@include respond(tab-land) {
+		margin-bottom: 2.5rem;
+	}
 }
 
 .info__body {

@@ -12,19 +12,30 @@
 		),
 		url(../images/Taieri.svg);
 	color: $color-grey-dark-3;
-	padding: 5rem 10rem;
+	padding: 3rem 8rem;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-gap: 2rem;
 	overflow: hidden;
 	transition: all 0.5s ease;
+	@include respond(tab-land) {
+		padding: 3rem 6rem;
+	}
+
+	@include respond(tab-port) {
+		padding: 2rem 4rem;
+	}
 
 	&__line {
 		height: 120%;
+		border: none;
 		border-right: 3rem dotted rgba($color-grey-blue, 0.5);
 		position: absolute;
 		top: -4rem;
-		left: 50%;
+		left: 47%;
+		@include respond(tab-land) {
+			border-right: 2.5rem dotted rgba($color-grey-blue, 0.5);
+		}
 	}
 
 	&__clear {

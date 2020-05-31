@@ -4,11 +4,18 @@
 	background-position: center;
 	padding: 5rem 14rem;
 	display: grid;
-	column-gap: 5rem;
-	row-gap: 3rem;
+
 	grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
 	color: $color-primary-blue;
 	align-items: center;
+
+	@include respond(tab-land) {
+		grid-template-columns: 1fr 1fr;
+		grid-auto-flow: row;
+		justify-content: center;
+		row-gap: 2rem;
+		column-gap: 4rem;
+	}
 }
 .footer {
 	&__brand {
@@ -17,6 +24,10 @@
 		flex-direction: column;
 		align-items: flex-start;
 		justify-content: flex-start;
+
+		@include respond(tab-land) {
+			grid-column: 1/-1;
+		}
 
 		&--image {
 			margin-bottom: 1.5rem;
@@ -34,20 +45,32 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		@include respond(tab-land) {
+			justify-self: start;
+		}
 		&--list {
 			display: flex;
 			list-style-type: none;
 			justify-content: center;
 			flex-direction: column;
+			@include respond(tab-land) {
+				flex-direction: row;
+			}
 			&-item {
 				font-size: 1.5rem;
 				&:not(:last-child) {
 					margin-bottom: 0.5rem;
+					@include respond(tab-land) {
+						margin-right: 0.6rem;
+					}
 				}
 				span {
 					color: $color-grey-dark-3;
 					font-weight: bold;
 					font-size: 1.6rem;
+					@include respond(tab-land) {
+						margin-right: 50%;
+					}
 				}
 			}
 		}
@@ -65,9 +88,15 @@
 		flex-direction: column;
 		align-items: center;
 
+		@include respond(tab-land) {
+			justify-self: center;
+		}
 		&--head {
 			font-size: 2rem;
 			margin-bottom: 1rem;
+			@include respond(tab-land) {
+				margin-bottom: 2rem;
+			}
 		}
 
 		ul {

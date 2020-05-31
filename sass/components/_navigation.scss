@@ -10,6 +10,9 @@
 		display: flex;
 		list-style-type: none;
 		margin-left: 25rem;
+		@include respond(tab-port) {
+			margin-left: 10rem;
+		}
 		&-items {
 			cursor: pointer;
 			position: relative;

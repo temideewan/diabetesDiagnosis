@@ -10,6 +10,9 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	@include respond(tab-port) {
+		height: 70vh;
+	}
 }
 
 .signup {

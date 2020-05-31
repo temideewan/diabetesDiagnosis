@@ -1,6 +1,14 @@
 .form {
 	&__login {
 		place-self: center;
+		margin-left: 3rem;
+		margin-top: -10rem;
+		@include respond(tab-land) {
+			margin-top: -15rem;
+		}
+		@include respond(tab-land) {
+			margin-top: -25rem;
+		}
 	}
 
 	&__register {
@@ -14,11 +22,15 @@
 	}
 
 	&__item {
-		width: 40rem;
+		width: 35rem;
 		margin-bottom: 1.5rem;
 		position: relative;
 		height: 5rem;
 		overflow: hidden;
+		@include respond(tab-land) {
+			width: 30rem;
+			height: 4.5rem;
+		}
 		&--input {
 			width: 100%;
 			height: 100%;
