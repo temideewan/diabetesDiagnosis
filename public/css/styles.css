@@ -382,7 +382,7 @@ body {
     outline: none; }
   .form__item--input:focus + .form__item--label .form__item--label--span,
   .form__item--input:valid + .form__item--label .form__item--label--span {
-    transform: translateY(-140%);
+    transform: translateY(-120%);
     font-size: 1.4rem;
     color: #5fa6d3; }
   .form__item--input:focus + .form__item--label::after,
@@ -513,6 +513,9 @@ body {
       justify-content: center;
       row-gap: 2rem;
       column-gap: 4rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .site__footer {
+      grid-template-columns: 1fr; } }
 
 .footer__brand {
   justify-self: start;
@@ -522,7 +525,11 @@ body {
   justify-content: flex-start; }
   @media only screen and (max-width: 75em) {
     .footer__brand {
-      grid-column: 1/-1; } }
+      grid-column: 1/-1;
+      align-items: center; } }
+  @media only screen and (max-width: 37.5em) {
+    .footer__brand {
+      margin-bottom: 2rem; } }
   .footer__brand--image {
     margin-bottom: 1.5rem; }
   .footer__brand--text {
@@ -540,6 +547,10 @@ body {
   @media only screen and (max-width: 75em) {
     .footer__contact {
       justify-self: start; } }
+  @media only screen and (max-width: 37.5em) {
+    .footer__contact {
+      margin-bottom: 2rem;
+      justify-self: center; } }
   .footer__contact--list {
     display: flex;
     list-style-type: none;
@@ -576,6 +587,10 @@ body {
   @media only screen and (max-width: 75em) {
     .footer__links {
       justify-self: center; } }
+  @media only screen and (max-width: 37.5em) {
+    .footer__links {
+      justify-self: center;
+      margin-bottom: 2rem; } }
   .footer__links--head {
     font-size: 2rem;
     margin-bottom: 1rem; }
@@ -661,7 +676,7 @@ body {
       padding: 4rem 5rem; } }
   @media only screen and (max-width: 37.5em) {
     .site__footer {
-      padding: 0 2rem; } }
+      padding: 2rem; } }
 
 .about__header {
   grid-row: 1/2;
@@ -745,6 +760,76 @@ body {
       width: 90%; }
       .about__info--body p:not(:last-of-type) {
         margin-bottom: 1rem; }
+
+.grid-positive {
+  display: grid;
+  grid-template-rows: 70vh;
+  grid-template-columns: minmax(4rem, 1fr) repeat(8, minmax(min-content, 25rem)) minmax(4rem, 1fr); }
+
+.diagnosis__header {
+  grid-row: 1/2;
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-template-rows: 7rem calc(70vh - 7rem); }
+
+.diagnosis-hero {
+  grid-row: 2/3;
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0 0 14rem;
+  align-items: center;
+  overflow: hidden;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url(../images/diagnosis.jpg);
+  background-attachment: fixed;
+  background-position: bottom;
+  background-size: cover; }
+  .diagnosis-hero__message--heading {
+    font-size: 7rem;
+    color: #f3f4f6; }
+    .diagnosis-hero__message--heading span {
+      color: #19a5eb; }
+  .diagnosis-hero__message--body a:link,
+  .diagnosis-hero__message--body a:visited {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    display: inline-block;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem; }
+  .diagnosis-hero__message--body a:hover,
+  .diagnosis-hero__message--body a:active {
+    transform: translateX(-3px) translateY(-3px);
+    background-color: #2d314d;
+    color: #fafafa;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5); }
+
+.flex__form {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem 3rem; }
+
+.section__diagnosis {
+  padding: 6rem 14rem;
+  grid-column: 1/-1;
+  background-image: linear-gradient(rgba(243, 244, 246, 0.5), rgba(243, 244, 246, 0.5)), url(../images/Taieri.svg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  text-align: center; }
+
+.first-half {
+  margin-left: 2rem;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1.5rem 1.8rem; }
+
+.second-half {
+  padding: 1.2rem;
+  margin-left: -20rem;
+  background: rgba(255, 255, 255, 0.8); }
 
 .grid-positive {
   display: grid;

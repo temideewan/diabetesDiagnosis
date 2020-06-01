@@ -16,6 +16,10 @@
 		row-gap: 2rem;
 		column-gap: 4rem;
 	}
+
+	@include respond(phone) {
+		grid-template-columns: 1fr;
+	}
 }
 .footer {
 	&__brand {
@@ -27,6 +31,11 @@
 
 		@include respond(tab-land) {
 			grid-column: 1/-1;
+			align-items: center;
+		}
+
+		@include respond(phone) {
+			margin-bottom: 2rem;
 		}
 
 		&--image {
@@ -47,6 +56,10 @@
 		justify-content: center;
 		@include respond(tab-land) {
 			justify-self: start;
+		}
+		@include respond(phone) {
+			margin-bottom: 2rem;
+			justify-self: center;
 		}
 		&--list {
 			display: flex;
@@ -90,6 +103,10 @@
 
 		@include respond(tab-land) {
 			justify-self: center;
+		}
+		@include respond(phone) {
+			justify-self: center;
+			margin-bottom: 2rem;
 		}
 		&--head {
 			font-size: 2rem;

@@ -42,7 +42,7 @@
 		}
 		&--input:focus + &--label &--label--span,
 		&--input:valid + &--label &--label--span {
-			transform: translateY(-140%);
+			transform: translateY(-120%);
 			font-size: 1.4rem;
 			color: #5fa6d3;
 		}
