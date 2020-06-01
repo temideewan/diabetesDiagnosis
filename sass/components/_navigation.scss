@@ -14,11 +14,17 @@
 		@include respond(tab-port) {
 			margin-left: 10rem;
 		}
+
 		@include respond(phone) {
-			display: flex;
-			flex: 0 0 100%;
-			order: 2;
+			margin-left: 5rem;
 		}
+
+		//TODO navigation for mobile
+		// @include respond(phone) {
+		// 	display: flex;
+		// 	flex: 0 0 100%;
+		// 	order: 2;
+		// }
 		&-items {
 			cursor: pointer;
 			position: relative;
@@ -69,23 +75,24 @@
 	}
 }
 
-.toggle-nav {
-	display: inline-block;
-	font-size: 4.2rem;
-	transition: transform 0.3s ease;
-	color: $color-white;
-}
+//TODO
+// .toggle-nav {
+// 	display: inline-block;
+// 	font-size: 4.2rem;
+// 	transition: transform 0.3s ease;
+// 	color: $color-white;
+// }
 
-.nav__toggler {
-	width: 5rem;
-	height: 5rem;
-	background-color: $color-primary-lightblue;
-	border-radius: 50%;
-	display: none;
-	align-items: center;
-	justify-content: center;
+// .nav__toggler {
+// 	width: 5rem;
+// 	height: 5rem;
+// 	background-color: $color-primary-lightblue;
+// 	border-radius: 50%;
+// 	display: none;
+// 	align-items: center;
+// 	justify-content: center;
 
-	@include respond(phone) {
-		display: flex;
-	}
-}
+// 	@include respond(phone) {
+// 		display: flex;
+// 	}
+// }
