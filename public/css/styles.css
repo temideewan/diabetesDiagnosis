@@ -87,6 +87,7 @@ body {
 
 .navigation {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.9);
   justify-content: space-between;
@@ -99,6 +100,11 @@ body {
     @media only screen and (max-width: 56.25em) {
       .navigation__list {
         margin-left: 10rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .navigation__list {
+        display: flex;
+        flex: 0 0 100%;
+        order: 2; } }
     .navigation__list-items {
       cursor: pointer;
       position: relative;
@@ -131,6 +137,24 @@ body {
     color: #19a5eb; }
   .navigation__btn {
     padding: 1rem 2rem; }
+
+.toggle-nav {
+  display: inline-block;
+  font-size: 4.2rem;
+  transition: transform 0.3s ease;
+  color: white; }
+
+.nav__toggler {
+  width: 5rem;
+  height: 5rem;
+  background-color: #2b71b5;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center; }
+  @media only screen and (max-width: 37.5em) {
+    .nav__toggler {
+      display: flex; } }
 
 .cta, .cta:link, .cta:visited {
   text-transform: uppercase;
@@ -811,6 +835,11 @@ body {
   align-items: center;
   justify-content: space-around;
   padding: 2rem 3rem; }
+  @media only screen and (max-width: 37.5em) {
+    .flex__form {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; } }
 
 .section__diagnosis {
   padding: 6rem 14rem;
@@ -823,13 +852,29 @@ body {
 
 .first-half {
   margin-left: 2rem;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 1.5rem 1.8rem; }
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1.5rem 1.8rem;
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.3); }
+  @media only screen and (max-width: 62.5em) {
+    .first-half {
+      margin-right: 25rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .first-half {
+      margin-right: 0;
+      margin-left: 0; } }
+  .first-half > .form__item {
+    margin-bottom: 3.5rem; }
 
 .second-half {
-  padding: 1.2rem;
+  padding: 1.5rem 1.8rem;
   margin-left: -20rem;
-  background: rgba(255, 255, 255, 0.8); }
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.3); }
+  .second-half > .form__item {
+    margin-bottom: 3.5rem; }
+  @media only screen and (max-width: 37.5em) {
+    .second-half {
+      margin-left: 0; } }
 
 .grid-positive {
   display: grid;
